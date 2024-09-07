@@ -1,0 +1,56 @@
+#!/usr/bin/perl -w
+
+package esmith;
+
+use strict;
+use Errno;
+use esmith::config;
+use esmith::util;
+
+my %conf;
+tie %conf, 'esmith::config';
+
+my %accounts;
+tie %accounts, 'esmith::config', '/home/e-smith/db/accounts';
+
+my $event = $ARGV [0];
+my $userName = $ARGV [1];
+
+die "Username argument missing." unless defined ($userName);
+
+my $value = $accounts {$userName};
+my ($type, %properties) = split (/\|/, $value, -1);
+
+if ($type ne 'user')
+{
+    die "Account $userName is not a user account; modify user failed.\n";
+}
+
+# defaults to rssh with no rights
+my $Shell=$properties{'Shell'} || 'rssh';
+
+if (($Shell eq 'bash') || ($Shell eq 'sudo'))
+{
+    $Shell = '/bin/bash';
+}
+else
+{
+    $Shell = '/usr/bin/rssh';
+}
+
+my $cmd = "/usr/sbin/usermod";
+$cmd .= " -s \"$Shell\"";
+$cmd .= " '$userName'";
+
+my $discard = `$cmd`;
+if ($? != 0)
+{
+    die "Failed to modify account $userName.\n";
+}
+
+esmith::util::processTemplate (\%conf, "/etc/sudoers");
+chmod 0440, "/etc/sudoers";
+
+esmith::util::processTemplate (\%conf, "/etc/rssh.conf");
+
+esmith::util::processTemplate (\%conf, "/etc/proftpd.conf");

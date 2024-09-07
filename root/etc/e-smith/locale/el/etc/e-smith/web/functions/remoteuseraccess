@@ -1,0 +1,62 @@
+<lexicon lang="el">
+    <entry>
+      <base>User Remote Access</base>
+      <trans>Χρήστες Απομεμακρυσμένης Πρόσβασης</trans>
+    </entry>
+    <entry>
+      <base>SSH keys</base>
+      <trans>Κλείδες SSH</trans>
+    </entry>
+    <entry>
+      <base>FORM_TITLE</base>
+      <trans>Αλλαγή ρυθμίσεων χρηστών με δικαίωμα απομεμακρυσμένης πρόσβασης</trans>
+    </entry>
+    <entry>
+      <base>SHELL_ACCESS</base>
+      <trans>Shell</trans>
+    </entry>
+    <entry>
+      <base>SUDO</base>
+      <trans>Sudo</trans>
+    </entry>
+    <entry>
+      <base>SSH_KEYS</base>
+      <trans>Κλείδες SSH</trans>
+    </entry>
+    <entry>
+      <base>CHROOT_PATH</base>
+      <trans>Chroot Path</trans>
+    </entry>
+    <entry>
+      <base>CHROOT_PATH_NOT_GIVEN</base>
+      <trans>Δεν δόθηκε Chroot Path</trans>
+    </entry>
+    <entry>
+      <base>CHROOT_PATH_NON_EXISTANT</base>
+      <trans>Δεν υφίσταται το παραπάνω Chroot Path</trans>
+    </entry>
+    <entry>
+      <base>SELECT_CHROOT_PATH</base>
+      <trans>Επιλογή Chroot Path</trans>
+    </entry>
+    <entry>
+      <base>VPN_ACCESS</base>
+      <trans>Πρόσβαση RSSH + VPN</trans>
+    </entry>
+    <entry>
+      <base>SHELL_ACCESS</base>
+      <trans>Πρόσβαση Κελύφους (Shell)</trans>
+    </entry>
+    <entry>
+      <base>SUDOER_ACCESS</base>
+      <trans>Πρόσβαση Sudo</trans>
+    </entry>
+    <entry>
+      <base>MODIFY_DESCRIPTION</base>
+	  <trans><![CDATA[ <p> Enabling bash shell access for a user account poses a security risk. Only use this option if you know what you are doing. A safer option is to allow rssh access (sftp, ssh & rsync). </p> <p> Sudo access allows users to execute commands with the permissions of the root account without knowing the root password. This is more desirable than passing around the root password. Setting Sudo to yes also sets the shell to bash </p> <p> SHELL, VPN & FTP access for users depend on the settings in the Remote Access Panel being opened. </p> <p> Select an FTP Chroot path from the drop down box or enter it in the text field, the selection will overwrite the text field. </p> <p> Enter the public SSH Keys to allow ssh access without passwords, keys should be pasted as a single line, but they will wrap onto three or more lines in the display. To delete all keys type "deletekeys". </p> ]]></trans>
+    </entry>
+    <entry>
+      <base>SSHKEYS_DESCRIPTION</base>
+      <trans>Εισάγετε τις δημόσιες Κλείδες SSH για να επιτρέψετε πρόσβαση ssh χωρίς κωδικούς, η επικόλληση των κλειδών θα πρέπει να γίνει σε μία γραμμή, αλλά θα αναδιπλωθούν σε τρεις ή περισσότερες γραμμές στην οθόνη. Για να διαγράψετε όλες τις κλείδες πληκτρολογήστε "deletekeys".</trans>
+    </entry>
+</lexicon>

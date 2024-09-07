@@ -1,0 +1,62 @@
+<lexicon lang="pt-br">
+    <entry>
+      <base>User Remote Access</base>
+      <trans>Acesso Remoto do Usuário</trans>
+    </entry>
+    <entry>
+      <base>SSH keys</base>
+      <trans>Chaves SSH</trans>
+    </entry>
+    <entry>
+      <base>FORM_TITLE</base>
+      <trans>Mudar configurações de acesso remoto do usuário</trans>
+    </entry>
+    <entry>
+      <base>SHELL_ACCESS</base>
+      <trans>Shell</trans>
+    </entry>
+    <entry>
+      <base>SUDO</base>
+      <trans>Sudo</trans>
+    </entry>
+    <entry>
+      <base>SSH_KEYS</base>
+      <trans>Chaves SSH</trans>
+    </entry>
+    <entry>
+      <base>CHROOT_PATH</base>
+      <trans>Caminho do CHROOT</trans>
+    </entry>
+    <entry>
+      <base>CHROOT_PATH_NOT_GIVEN</base>
+      <trans>Caminho do CHROOT não fornecido</trans>
+    </entry>
+    <entry>
+      <base>CHROOT_PATH_NON_EXISTANT</base>
+      <trans>Caminho do CHROOT não existe</trans>
+    </entry>
+    <entry>
+      <base>SELECT_CHROOT_PATH</base>
+      <trans>Selecione o caminho do CHROOT</trans>
+    </entry>
+    <entry>
+      <base>VPN_ACCESS</base>
+      <trans>Acesso RSSH e VPN</trans>
+    </entry>
+    <entry>
+      <base>SHELL_ACCESS</base>
+      <trans>Acesso Shell</trans>
+    </entry>
+    <entry>
+      <base>SUDOER_ACCESS</base>
+      <trans>Acesso Sudo</trans>
+    </entry>
+    <entry>
+      <base>MODIFY_DESCRIPTION</base>
+	  <trans><![CDATA[ <p> Enabling bash shell access for a user account poses a security risk. Only use this option if you know what you are doing. A safer option is to allow rssh access (sftp, ssh & rsync). </p> <p> Sudo access allows users to execute commands with the permissions of the root account without knowing the root password. This is more desirable than passing around the root password. Setting Sudo to yes also sets the shell to bash </p> <p> SHELL, VPN & FTP access for users depend on the settings in the Remote Access Panel being opened. </p> <p> Select an FTP Chroot path from the drop down box or enter it in the text field, the selection will overwrite the text field. </p> <p> Enter the public SSH Keys to allow ssh access without passwords, keys should be pasted as a single line, but they will wrap onto three or more lines in the display. To delete all keys type "deletekeys". </p> ]]></trans>
+    </entry>
+    <entry>
+      <base>SSHKEYS_DESCRIPTION</base>
+      <trans>Entre as chave de SSH públicas para permitir acesso SSH sem senhas, as chaves devem ser coladas como uma linha simples mas serão quebradas em três ou mais linhas para exibição na tela. Para apagar todas as chaves escreva "deletekeys".</trans>
+    </entry>
+</lexicon>

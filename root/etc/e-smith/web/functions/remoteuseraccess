@@ -1,0 +1,103 @@
+#!/usr/bin/perl -wT
+
+#----------------------------------------------------------------------
+# heading     : Security
+# description : User Remote Access
+# navigation  : 1000 1250
+#
+# Modified (c) 2002,2006 Stephen Noble <stephen@dungog.net>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+#----------------------------------------------------------------------
+
+use strict;
+use warnings;
+
+use esmith::FormMagick::Panel::remoteuseraccess;
+
+my $fm = esmith::FormMagick::Panel::remoteuseraccess->new();
+$fm->display();
+
+__DATA__
+<form title="FORM_TITLE"
+    header="/etc/e-smith/web/common/head.tmpl"
+    footer="/etc/e-smith/web/common/foot.tmpl">
+    
+    <page 
+        name="First"  
+        pre-event="print_status_message()">
+     
+        <subroutine src="print_table" />
+    </page>
+
+    <page 
+        name="PAGE_MODIFY"
+        pre-event="turn_off_buttons()"
+        post-event="change_settings()" >
+
+        <description>MODIFY_DESCRIPTION</description>
+
+        <field type="literal" id="User" >
+            <label>ACCOUNT</label>
+        </field>
+
+        <field type="literal" id="FullName">
+            <label>USER_NAME</label>
+        </field>
+
+        <field
+            type="select"
+            id="Shell"
+            options="'', '/bin/bash'"
+            value="Shell" >
+            <label>SHELL_ACCESS</label> 
+        </field> 
+
+        <field
+            type="select"
+            id="Sudoer"
+            options="'no' => 'NO', 'yes' => 'YES'"
+            value="Sudoer" >
+            <label>SUDOER_ACCESS</label>
+        </field>
+
+        <field
+            type="select"
+            id="VPNClientAccess"
+            options="'no' => 'NO', 'yes' => 'YES'"
+            value="VPNClientAccess" >
+            <label>VPN_ACCESS</label>
+        </field>
+        
+        <field
+            type="select"
+            id="ChrootDir2" 
+            options="get_chroot_dir()" 
+            value="">
+             <label>SELECT_CHROOT_PATH</label>
+        </field>
+
+       <field 
+          type="text" size="50"
+          id="ChrootDir" 
+          value=""
+          validation="CheckChrootDirExists()">
+         <label>CHROOT_PATH</label>
+       </field>
+
+       <field type="textarea"
+	      rows="10" cols="30"
+	      id="sshKeys"
+          value="get_keys_text()">
+	      <label>SSH_KEYS</label>
+       </field>
+
+        <subroutine src="print_button('SAVE')" />
+ 
+     </page>
+     
+</form>

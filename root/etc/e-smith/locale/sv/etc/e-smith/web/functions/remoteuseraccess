@@ -1,0 +1,62 @@
+<lexicon lang="sv">
+    <entry>
+      <base>User Remote Access</base>
+      <trans>Användares fjärråtkomst</trans>
+    </entry>
+    <entry>
+      <base>SSH keys</base>
+      <trans>SSH-nycklar</trans>
+    </entry>
+    <entry>
+      <base>FORM_TITLE</base>
+      <trans>Ändra inställningar för användares fjärråtkomst</trans>
+    </entry>
+    <entry>
+      <base>SHELL_ACCESS</base>
+      <trans>Skal</trans>
+    </entry>
+    <entry>
+      <base>SUDO</base>
+      <trans>Sudo</trans>
+    </entry>
+    <entry>
+      <base>SSH_KEYS</base>
+      <trans>SSH-nycklar</trans>
+    </entry>
+    <entry>
+      <base>CHROOT_PATH</base>
+      <trans>Chroot-sökväg</trans>
+    </entry>
+    <entry>
+      <base>CHROOT_PATH_NOT_GIVEN</base>
+      <trans>Chroot-sökväg inte angiven</trans>
+    </entry>
+    <entry>
+      <base>CHROOT_PATH_NON_EXISTANT</base>
+      <trans>Chroot-sökväg existerar inte</trans>
+    </entry>
+    <entry>
+      <base>SELECT_CHROOT_PATH</base>
+      <trans>Välj Chroot-sökväg</trans>
+    </entry>
+    <entry>
+      <base>VPN_ACCESS</base>
+      <trans>RSSH + VPN-åtkomst</trans>
+    </entry>
+    <entry>
+      <base>SHELL_ACCESS</base>
+      <trans>Skalåtkomst</trans>
+    </entry>
+    <entry>
+      <base>SUDOER_ACCESS</base>
+      <trans>Sudo-åtkomst</trans>
+    </entry>
+    <entry>
+      <base>MODIFY_DESCRIPTION</base>
+	  <trans><![CDATA[ <p> Enabling bash shell access for a user account poses a security risk. Only use this option if you know what you are doing. A safer option is to allow rssh access (sftp, ssh & rsync). </p> <p> Sudo access allows users to execute commands with the permissions of the root account without knowing the root password. This is more desirable than passing around the root password. Setting Sudo to yes also sets the shell to bash </p> <p> SHELL, VPN & FTP access for users depend on the settings in the Remote Access Panel being opened. </p> <p> Select an FTP Chroot path from the drop down box or enter it in the text field, the selection will overwrite the text field. </p> <p> Enter the public SSH Keys to allow ssh access without passwords, keys should be pasted as a single line, but they will wrap onto three or more lines in the display. To delete all keys type "deletekeys". </p> ]]></trans>
+    </entry>
+    <entry>
+      <base>SSHKEYS_DESCRIPTION</base>
+      <trans>Ange de publika SSH-nycklarna som tillåter ssh-åtkomst utan lösenord. Nycklarna skall klistras in som en rad, men de presenteras på 3 eller fler rader i rutan. För att radera samtliga nycklar skriv "deletekeys".</trans>
+    </entry>
+</lexicon>

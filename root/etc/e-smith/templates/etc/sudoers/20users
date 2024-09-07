@@ -1,0 +1,22 @@
+{
+    my %accounts;
+    tie %accounts, 'esmith::config', '/home/e-smith/db/accounts';
+
+    my $key;
+    my $value;
+    my $result = "";
+
+    while (($key,$value) = each %accounts)
+    {
+      my ($type, %properties) = split (/\|/, $value, -1);
+      if ($type eq 'user')
+	  {
+	    if (defined($properties{'Sudoer'}) && $properties{'Sudoer'} eq 'yes')
+	    {
+		$result .= "$key   ALL=(ALL) ALL\n";
+	    }
+	  }
+    }
+
+    $result;
+}

@@ -1,0 +1,62 @@
+<lexicon lang="zh-tw">
+    <entry>
+      <base>User Remote Access</base>
+      <trans>使用者遠端存取</trans>
+    </entry>
+    <entry>
+      <base>SSH keys</base>
+      <trans>SSH金鑰</trans>
+    </entry>
+    <entry>
+      <base>FORM_TITLE</base>
+      <trans>改變使用者遠端存取設定</trans>
+    </entry>
+    <entry>
+      <base>SHELL_ACCESS</base>
+      <trans>命令列</trans>
+    </entry>
+    <entry>
+      <base>SUDO</base>
+      <trans>超級使用者</trans>
+    </entry>
+    <entry>
+      <base>SSH_KEYS</base>
+      <trans>SSH金鑰</trans>
+    </entry>
+    <entry>
+      <base>CHROOT_PATH</base>
+      <trans>置換根目錄的路徑</trans>
+    </entry>
+    <entry>
+      <base>CHROOT_PATH_NOT_GIVEN</base>
+      <trans>未給定置換根目錄的路徑</trans>
+    </entry>
+    <entry>
+      <base>CHROOT_PATH_NON_EXISTANT</base>
+      <trans>置換根目錄的路徑不存在</trans>
+    </entry>
+    <entry>
+      <base>SELECT_CHROOT_PATH</base>
+      <trans>選擇置換根目錄的路徑</trans>
+    </entry>
+    <entry>
+      <base>VPN_ACCESS</base>
+      <trans>RSSH + VPN存取</trans>
+    </entry>
+    <entry>
+      <base>SHELL_ACCESS</base>
+      <trans>命令列存取</trans>
+    </entry>
+    <entry>
+      <base>SUDOER_ACCESS</base>
+      <trans>超級使用者存取</trans>
+    </entry>
+    <entry>
+      <base>MODIFY_DESCRIPTION</base>
+	  <trans><![CDATA[ <p>啟用使用者帳號的bash shell存取存在安全風險。僅能在您知道自己在做什麼的情況下使用這個選項。更安全的選擇是允許rssh存取(sftp, ssh & rsync)。</p> <p>Sudo存取允許使用者執行root帳號權限的命令而無需root密碼。此較傳遞root密碼更為可取。啟用Sudo亦啟用shell為bash。</p> <p> SHELL, VPN & FTP使用者存取基於遠端存取控制台設定的開啟。</p> <p>從下拉框或文字輸入區中選擇FTP置換根目錄的路徑，蓋選項將覆寫文字區。</p> <p>輸入SSH公開金鑰以允許ssh無需密碼存取，金鑰需以無間斷方式一整行貼上，但可能會以三行以上方式顯示。要刪除所有金鑰請輸入"deletekeys"。</p> ]]></trans>
+    </entry>
+    <entry>
+      <base>SSHKEYS_DESCRIPTION</base>
+      <trans>輸入SSH金鑰以允許ssh無密碼存取，金鑰需以無間斷方式一整行貼上，但可能會以三行以上方式顯示。要刪除所有金鑰請輸入"deletekeys"。</trans>
+    </entry>
+</lexicon>
