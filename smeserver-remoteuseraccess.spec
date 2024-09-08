@@ -6,7 +6,7 @@ Summary: Smeserver module to configure Shell and FTP access for individual users
 %define name smeserver-remoteuseraccess
 Name: %{name}
 %define version 1.3
-%define release 7
+%define release 8
 Version: %{version}
 Release: %{release}%{?dist}
 License: GNU GPL version 2
@@ -15,12 +15,12 @@ Group: Networking/Daemons
 Source: %{name}-%{version}.tar.xz
 
 BuildRoot: /var/tmp/e-smith-buildroot
-BuildRequires: e-smith-devtools
+BuildRequires: smeserver-devtools
 BuildArchitectures: noarch
-Requires: e-smith-release >= 7
-Requires: e-smith-proftpd >= 1.12.0-6
-Requires: e-smith-openssh >= 1.11.0-24
-Requires: e-smith-formmagick >= 1.4.0-12
+Requires: smeserver-release >= 7
+Requires: smeserver-proftpd >= 1.12.0-6
+Requires: smeserver-openssh >= 1.11.0-24
+Requires: smeserver-formmagick >= 1.4.0-12
 Obsoletes: dungog-proftpd-chroot
 Obsoletes: e-smith-usershellaccess
 Obsoletes: smeserver-sshkeys
@@ -38,6 +38,9 @@ Also sets Chroots FTP access, VPN Client Access,
 and allows you to enter ssh keys  
 
 %changelog
+* Sun Sep 08 2024 fix-e-smith-pkg.sh by Trevor Batley <trevor@batley.id.au> 1.3-8.sme
+- Fix e-smith references in smeserver-remoteuseraccess [SME: 12732]
+
 * Sat Sep 07 2024 cvs2git.sh aka Brian Read <brianr@koozali.org> 1.3-7.sme
 - Roll up patches and move to git repo [SME: 12338]
 
