@@ -5,8 +5,8 @@
 Summary: Smeserver module to configure Shell and FTP access for individual users
 %define name smeserver-remoteuseraccess
 Name: %{name}
-%define version 1.3
-%define release 8
+%define version 11.0.0
+%define release 1
 Version: %{version}
 Release: %{release}%{?dist}
 License: GNU GPL version 2
@@ -38,6 +38,9 @@ Also sets Chroots FTP access, VPN Client Access,
 and allows you to enter ssh keys  
 
 %changelog
+* Mon May 19 2025 Brian Read <brianr@koozali.org> 11.0.0-1.sme
+- Add in SM2 panels
+
 * Sun Sep 08 2024 fix-e-smith-pkg.sh by Trevor Batley <trevor@batley.id.au> 1.3-8.sme
 - Fix e-smith references in smeserver-remoteuseraccess [SME: 12732]
 
