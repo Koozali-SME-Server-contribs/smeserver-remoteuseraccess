@@ -50,14 +50,14 @@
 			%=l('rua_Account')
 		</span><span class=data>
 			% param 'Account' => $rua_data->{Account} unless param 'Account';
-			%= text_field 'Account', size => '50', class => 'textinput Account' , pattern=>'.*' , placeholder=>'Account', title =>'Pattern regex mismatch', id => 'Account_text'
+			%= text_field 'Account', size => '50', class => 'textinput Account' , pattern=>'.*' , placeholder=>'Account', title =>'Pattern regex mismatch', id => 'Account_text', readonly => 1
 		<br></span></p>
 	
 		<p><span class=label>
 			%=l('rua_User_Name')
 		</span><span class=data>
 			% param 'User_Name' => $rua_data->{User_Name} unless param 'User_Name';
-			%= text_field 'User_Name', size => '50', class => 'textinput User_Name' , pattern=>'.*' , placeholder=>'User_Name', title =>'Pattern regex mismatch', id => 'User_Name_text'
+			%= text_field 'User_Name', size => '50', class => 'textinput User_Name' , pattern=>'.*' , placeholder=>'User_Name', title =>'Pattern regex mismatch', id => 'User_Name_text', readonly => 1
 		<br></span></p>
 	
 		<p><span class=label>

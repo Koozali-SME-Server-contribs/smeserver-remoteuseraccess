@@ -20,9 +20,9 @@ use constant TRUE  => 1;
 #The most common ones
 my $cdb; 
 my $adb; 
-#my $ndb 
-#my $hdb 
-#my $ddb 
+#my $ndb; 
+#my $hdb; 
+#my $ddb; 
 
 # Validation routines - parameters for each panel
 
@@ -42,22 +42,24 @@ my $adb;
 		# Validation for each field 
 		my $ret = "";
 		
-		if (! TRUE) #validate $c->param('Account')
-			{$ret .= 'Validation for Account failed';}	
-		if (! TRUE) #validate $c->param('User_Name')
-			{$ret .= 'Validation for User_Name failed';}	
-		if (! TRUE) #validate $c->param('Shell')
-			{$ret .= 'Validation for Shell failed';}	
-		if (! TRUE) #validate $c->param('Sudoer')
-			{$ret .= 'Validation for Sudoer failed';}	
-		if (! TRUE) #validate $c->param('VPNClientAccess')
-			{$ret .= 'Validation for VPNClientAccess failed';}	
-		if (! TRUE) #validate $c->param('ChrootDir2')
-			{$ret .= 'Validation for ChrootDir2 failed';}	
-		if (! TRUE) #validate $c->param('ChrootDir')
-			{$ret .= 'Validation for ChrootDir failed';}	
-		if (! TRUE) #validate $c->param('sshKeys')
-			{$ret .= 'Validation for sshKeys failed';}	
+		#if (! TRUE) #validate $c->param('Account')
+			#{$ret .= 'Validation for Account failed';}	
+		#if (! TRUE) #validate $c->param('User_Name')
+			#{$ret .= 'Validation for User_Name failed';}	
+		#if (! TRUE) #validate $c->param('Shell')
+			#{$ret .= 'Validation for Shell failed';}	
+		#if (! TRUE) #validate $c->param('Sudoer')
+			#{$ret .= 'Validation for Sudoer failed';}	
+		#if (! TRUE) #validate $c->param('VPNClientAccess')
+			#{$ret .= 'Validation for VPNClientAccess failed';}	
+		#if (! TRUE) #validate $c->param('ChrootDir2')
+			#{$ret .= 'Validation for ChrootDir2 failed';}	
+		#if (! TRUE) #validate $c->param('ChrootDir')
+			#{$ret .= 'Validation for ChrootDir failed';}	
+		#if (! TRUE) #validate $c->param('sshKeys')
+			#{$ret .= 'Validation for sshKeys failed';}	
+		#just check chroot in place
+		$ret = $c->CheckChrootDirExists();
 		if ($ret eq "") {$ret = 'ok';}
 		return $ret;
 	}
@@ -81,7 +83,8 @@ my $adb;
 		my $c = shift;
 		my $user = $c->param('Selected');
 		$adb = esmith::AccountsDB->open();
-		$userrec = $adb->get_record($user) || return {};
+		#die("$user");
+		$userrec = $adb->get($user) || return ('Account' => "$user not found");
 	
 		my %ret = (
 			# fields from Inputs in PARAMS $fields['PARAMS']
@@ -105,11 +108,11 @@ my $adb;
 	# Define a constant hash for field name mapping
 	use constant getAllUsers_FIELD_MAPPING => (
 		'Account' => 'User',
-		'User_Name' => 'Full_Name',
-		'Shell_Access' => 'Shell',
+		'User_Name' => 'User_Name',
+		'Shell_Access' => 'shell',
 		'Sudo' => 'Sudoer',
-		'SSH_Keys' => 'Keys',
-		'Chroot_Path' => 'Chroot',
+		'SSH_Keys' => 'SSH_Keys',
+		'Chroot_Path' => 'Chroot_Path',
 		'RSSH_+_VPN_Access' => 'VPNClientAccess',
 		'Modify' => 'Modify'
 		#'target_field2' => 'source_field2',
@@ -149,15 +152,14 @@ sub actual_getAllUsers {
 
         push @data,
             { User            => $user->key,
-              FullName        => $user->prop('FirstName') . " " .
-                                 $user->prop('LastName'),
+              User_Name       => $user->prop('FirstName') . " " .$user->prop('LastName'),
               Sudoer          => $user->prop('Sudoer') || 'no',
               VPNClientAccess => $user->prop('VPNClientAccess') || 'no',
               shell           => $shell,
-              chroot          => $ChrootDir,
+              Chroot_Path     => $ChrootDir,
               ChrootDir       => $user->prop('ChrootDir')  || "/home/e-smith/files/users/$username/home",
               sudo            => $c->l($sudo),
-              keys            => $c->l($keys),
+              SSH_Keys        => $c->l($keys),
               vpn             => $c->l($vpn),
               Modify          => "<a href='remoteuseraccessd?trt=PARAMS&Selected=$acc'>".$c->l('MODIFY')."</a>",
             }
@@ -267,13 +269,6 @@ sub get_full_name {
             $adb->get_prop($user, "LastName");
 }
 
-sub get_chroot_options {
-	my $c = shift;
-	my $user = $c->params('Selected');
-	return [ [] ];
-}
-
-
 sub get_ssh_keys{
 	
 	my $c = shift;
@@ -336,7 +331,7 @@ sub userpanel_change_settings
 	   $user = $1;
     }
 
-    my $sshKeys = $c->param ('sshKeys');
+    my $sshKeys = $c->param ('ssh_keys');
     if ($sshKeys ne '')
     {
         my $file = "/home/e-smith/files/users/$user/.ssh/authorized_keys2";
@@ -396,6 +391,32 @@ sub userpanel_change_settings
 
     return 'ok'; #$self->success("SUCCESS");
 }
+
+sub CheckChrootDirExists
+{
+    my $c = shift;
+
+    my $ChrootDir   = $c->param ('ChrootDir')  || '';
+    my $ChrootDir2  = $c->param ('ChrootDir2') || '';
+
+    if ($ChrootDir2 eq '') 
+    {
+      if ($ChrootDir eq '')
+      {
+        return "CHROOT_PATH_NOT_GIVEN"; 
+      }
+      else
+      {  
+        if ((-e $ChrootDir ) || ($ChrootDir eq 'home'))
+        { return "OK"; }
+        else
+        { return "CHROOT_PATH_NON_EXISTANT"; }
+      } 
+    }
+    else
+    { return "ok"; }
+}
+
 
 
 1;
