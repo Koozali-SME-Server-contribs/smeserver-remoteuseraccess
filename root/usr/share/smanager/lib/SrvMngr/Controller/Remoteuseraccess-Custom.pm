@@ -7,11 +7,11 @@
 #
 use esmith::util;
 use esmith::util::network;
-use esmith::ConfigDB;
-use esmith::HostsDB;
-use esmith::AccountsDB;
+use esmith::ConfigDB::UTF8;
+use esmith::HostsDB::UTF8;
+use esmith::AccountsDB::UTF8;
 use esmith::NetworksDB;
-use esmith::DomainsDB;
+use esmith::DomainsDB::UTF8;
 
 use constant FALSE => 0;
 use constant TRUE  => 1;
@@ -82,7 +82,7 @@ my $adb;
 		# Return a hash with the fields required which will be loaded into the shared data 
 		my $c = shift;
 		my $user = $c->param('Selected');
-		$adb = esmith::AccountsDB->open();
+		$adb = esmith::AccountsDB::UTF8->open();
 		#die("$user");
 		$userrec = $adb->get($user) || return ('Account' => "$user not found");
 	
@@ -122,8 +122,8 @@ my $adb;
 sub actual_getAllUsers {
 	my $c = shift;
 	# Actual code for extracting getAllUsers
-	$cdb  = esmith::ConfigDB->open();
-	$adb = esmith::AccountsDB->open();
+	$cdb  = esmith::ConfigDB::UTF8->open();
+	$adb = esmith::AccountsDB::UTF8->open();
     my @data = ();
     my @users = $adb->users;
 
@@ -322,7 +322,7 @@ sub userpanel_change_settings
     my $VPNClientAccess = $c->param ('VPNClientAccess');
     my $ChrootDir       = $c->param ('ChrootDir');
     my $ChrootDir2      = $c->param ('ChrootDir2');
-   	$adb = esmith::AccountsDB->open();
+   	$adb = esmith::AccountsDB::UTF8->open();
 
     my $user      = $c->param('Selected');
 
