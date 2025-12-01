@@ -29,3 +29,4 @@
 'rua_User_Name' => 'User Name',
 'rua_Account' => 'Account',
 'rua_Shell_Access' => 'Shell Access',
+'rua_Remote user access' => "Remote user access",

@@ -6,7 +6,7 @@ Summary: Smeserver module to configure Shell and FTP access for individual users
 %define name smeserver-remoteuseraccess
 Name: %{name}
 %define version 11.0.0
-%define release 2
+%define release 3
 Version: %{version}
 Release: %{release}%{?dist}
 License: GNU GPL version 2
@@ -38,6 +38,9 @@ Also sets Chroots FTP access, VPN Client Access,
 and allows you to enter ssh keys  
 
 %changelog
+* Mon Dec 01 2025 Brian Read <brianr@koozali.org> 11.0.0-3.sme
+- Finish conversion to SM2 [SME: 13179]
+
 * Mon Oct 06 2025 Brian Read <brianr@koozali.org> 11.0.0-2.sme
 - Add UTF8 and avoid potential DB caching problems [SME: 13209]
 
