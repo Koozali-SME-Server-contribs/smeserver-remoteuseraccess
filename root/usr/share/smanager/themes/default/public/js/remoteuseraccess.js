@@ -3,3 +3,12 @@
 //
 $(document).ready(function() {
 });
+
+document.getElementById('ChrootDir2_select').addEventListener('change', function () {
+  const txt = document.getElementById('ChrootDir_text');
+  // copy the option value:
+  txt.value = this.value;
+
+  // or, if you want the visible text instead:
+  // txt.value = this.options[this.selectedIndex].text;
+});

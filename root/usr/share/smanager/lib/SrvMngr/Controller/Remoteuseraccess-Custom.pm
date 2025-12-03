@@ -375,13 +375,15 @@ sub userpanel_change_settings
        $ChrootDir2 = $ChrootDir || '';
     }
 
-    if (($Sudoer eq 'yes') or ($Shell eq '/bin/bash'))
-    {
-      $adb->set_prop($user, 'Shell', '/bin/bash');
-    } else {
-      $adb->set_prop($user, 'Shell', '/usr/bin/rssh');
-    }
+	#Not sure if this is relevant now we have lots of options inco nologon
+    #if ()($Sudoer eq 'yes') or ($Shell ne '/sbin/nologon'))
+    #{
+		#$adb->set_prop($user, 'Shell', $Shell);
+    #} else {
+      #$adb->set_prop($user, 'Shell', '/usr/bin/rssh');
+    #}
 
+    $adb->set_prop($user, 'Shell', $Shell);
     $adb->set_prop($user, 'Sudoer', $Sudoer);
     $adb->set_prop($user, 'ChrootDir', $ChrootDir2);
     $adb->set_prop($user, 'VPNClientAccess', $VPNClientAccess);
@@ -403,18 +405,41 @@ sub CheckChrootDirExists
     {
       if ($ChrootDir eq '')
       {
-        return "CHROOT_PATH_NOT_GIVEN"; 
+        return "rua_CHROOT_PATH_NOT_GIVEN"; 
       }
       else
       {  
         if ((-e $ChrootDir ) || ($ChrootDir eq 'home'))
         { return "OK"; }
         else
-        { return "CHROOT_PATH_NON_EXISTANT"; }
+        { return "rua_CHROOT_PATH_NON_EXISTANT"; }
       } 
     }
     else
     { return "ok"; }
+}
+
+sub get_shells {
+    my $self = shift;
+    my @options = (
+        ['/sbin/nologon', '/sbin/nologon']
+    );
+
+    # Read /etc/shells, skip comments and empty lines
+    open my $fh, '<', '/etc/shells' or return \@options;
+    while (my $line = <$fh>) {
+        chomp $line;
+        next if $line =~ /^\s*(#|$)/;  # skip comments and empty lines
+        push @options, [$line, $line];
+    }
+    close $fh;
+
+    # Add final options
+    push @options,
+        ['/usr/bin/sftp', '/usr/bin/sftp'],
+        ['/usr/bin/scp', '/usr/bin/scp'];
+
+    return \@options;
 }
 
 

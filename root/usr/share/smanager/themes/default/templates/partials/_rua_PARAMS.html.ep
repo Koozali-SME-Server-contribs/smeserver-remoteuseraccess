@@ -56,7 +56,7 @@
 		<p><span class=label>
 			%=l('rua_Shell_Access')
 		</span><span class=data>
-			% my @Shell_options = [['' => ''], ['/bin/bash' => '/bin/bash']];
+			% my @Shell_options = $c->get_shells();
 			% param 'Shell' => $rua_data->{Shell} unless param 'Shell';
 			%= select_field 'Shell' => @Shell_options, class => 'input', id => 'Shell_select'
 		<br></span>	</p>
