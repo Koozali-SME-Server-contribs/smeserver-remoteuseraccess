@@ -1,8 +1,6 @@
 #!/usr/bin/perl -w
 use esmith::Build::CreateLinks qw(:all);
 
-panel_link("remoteuseraccess", 'manager');
-
 foreach $event (qw( create delete modify ))
 {
 templates2events("/etc/proftpd.conf", "user-${event}");
