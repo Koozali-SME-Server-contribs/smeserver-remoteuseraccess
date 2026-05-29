@@ -1,0 +1,62 @@
+<lexicon lang="zh-cn">
+    <entry>
+      <base>User Remote Access</base>
+      <trans>用户远程访问</trans>
+    </entry>
+    <entry>
+      <base>SSH keys</base>
+      <trans>SSH 密钥</trans>
+    </entry>
+    <entry>
+      <base>FORM_TITLE</base>
+      <trans>修改用户远程访问设置</trans>
+    </entry>
+    <entry>
+      <base>SHELL_ACCESS</base>
+      <trans>Shell</trans>
+    </entry>
+    <entry>
+      <base>SUDO</base>
+      <trans>Sudo</trans>
+    </entry>
+    <entry>
+      <base>SSH_KEYS</base>
+      <trans>SSH 密钥</trans>
+    </entry>
+    <entry>
+      <base>CHROOT_PATH</base>
+      <trans>Chroot 路径</trans>
+    </entry>
+    <entry>
+      <base>CHROOT_PATH_NOT_GIVEN</base>
+      <trans>Chroot 路径未设置</trans>
+    </entry>
+    <entry>
+      <base>CHROOT_PATH_NON_EXISTANT</base>
+      <trans>Chroot 路径不存在</trans>
+    </entry>
+    <entry>
+      <base>SELECT_CHROOT_PATH</base>
+      <trans>选择 Chroot 路径</trans>
+    </entry>
+    <entry>
+      <base>VPN_ACCESS</base>
+      <trans>RSSH + VPN 访问</trans>
+    </entry>
+    <entry>
+      <base>SHELL_ACCESS</base>
+      <trans>Shell 访问</trans>
+    </entry>
+    <entry>
+      <base>SUDOER_ACCESS</base>
+      <trans>Sudo 访问</trans>
+    </entry>
+    <entry>
+      <base>MODIFY_DESCRIPTION</base>
+	  <trans><![CDATA[ <p> 启用 bash shell 访问用户账户存在安全风险。仅仅在您知道后果的情况下使用。 一个更安全的选项是允许RSSH访问(sftp, ssh & rsync)。</p> <p> Sudo 访问允许用户在不知道root密码的情况下以root权限执行命令。 这比在网络中传输root密码更为可取。启用Sudo也意味着启用 bash shell。</p> <p> SHELL, VPN & FTP 访问的前提是远程访问面板设置被开启。</p> <p> 在下面的框框或文本区填上一个 FTP Chroot 路径，位置栏会覆盖文本区域。</p> <p> 输入SSH公钥可以允许SSH无需密码访问，密钥每行粘贴一个，但显示时可能会占据三行或更多。要删除所有密钥请输入"deletekeys"。</p> ]]></trans>
+    </entry>
+    <entry>
+      <base>SSHKEYS_DESCRIPTION</base>
+      <trans>输入SSH公钥可以允许SSH无需密码访问，密钥每行粘贴一个，但显示时可能会占据三行或更多。要删除所有密钥请输入"deletekeys"。</trans>
+    </entry>
+</lexicon>
