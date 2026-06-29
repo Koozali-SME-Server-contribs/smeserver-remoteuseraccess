@@ -113,7 +113,7 @@ sub print_table
         { $keys = 'YES'; }
 
         my $shell = $user->prop('Shell') || '';
-        if ($shell eq '/usr/bin/rssh')  { $shell = ''; }
+        if ($shell eq '/usr/bin/scponly')  { $shell = ''; }
 
         my $ChrootDir  = $user->prop('ChrootDir')  || "";
         $ChrootDir =~ s:/home/e-smith/files/ibays/::;
@@ -264,7 +264,7 @@ sub change_settings
     {
       $adb->set_prop($user, 'Shell', '/bin/bash');
     } else {
-      $adb->set_prop($user, 'Shell', '/usr/bin/rssh');
+      $adb->set_prop($user, 'Shell', '/usr/bin/scponly');
     }
 
     $adb->set_prop($user, 'Sudoer', $Sudoer);

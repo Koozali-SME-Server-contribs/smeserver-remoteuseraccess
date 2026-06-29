@@ -26,8 +26,8 @@ if ($type ne 'user')
     die "Account $userName is not a user account; modify user failed.\n";
 }
 
-# defaults to rssh with no rights
-my $Shell=$properties{'Shell'} || 'rssh';
+# defaults to scponly with no rights
+my $Shell=$properties{'Shell'} || 'scponly';
 
 if (($Shell eq 'bash') || ($Shell eq 'sudo'))
 {
@@ -35,7 +35,7 @@ if (($Shell eq 'bash') || ($Shell eq 'sudo'))
 }
 else
 {
-    $Shell = '/usr/bin/rssh';
+    $Shell = '/usr/bin/scponly';
 }
 
 my $cmd = "/usr/sbin/usermod";
@@ -50,7 +50,5 @@ if ($? != 0)
 
 esmith::util::processTemplate (\%conf, "/etc/sudoers");
 chmod 0440, "/etc/sudoers";
-
-esmith::util::processTemplate (\%conf, "/etc/rssh.conf");
 
 esmith::util::processTemplate (\%conf, "/etc/proftpd.conf");

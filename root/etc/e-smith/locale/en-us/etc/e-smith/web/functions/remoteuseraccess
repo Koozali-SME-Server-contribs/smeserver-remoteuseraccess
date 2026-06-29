@@ -57,7 +57,7 @@
 	      <p>
 	         Enabling bash shell access for a user account poses a security risk.
              Only use this option if you know what you are doing. A safer option is to allow
-             rssh access (sftp, ssh & rsync).
+              scponly  access (sftp, ssh & rsync).
           </p>
           <p>
              Sudo access allows users to execute commands with the permissions

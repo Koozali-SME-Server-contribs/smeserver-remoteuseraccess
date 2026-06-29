@@ -6,7 +6,7 @@ Summary: Smeserver module to configure Shell and FTP access for individual users
 %define name smeserver-remoteuseraccess
 Name: %{name}
 %define version 11.0.0
-%define release 7
+%define release 8
 Version: %{version}
 Release: %{release}%{?dist}
 License: GNU GPL version 2
@@ -21,6 +21,7 @@ Requires: smeserver-release >= 7
 Requires: smeserver-proftpd >= 1.12.0-6
 Requires: smeserver-openssh >= 1.11.0-24
 Requires: smeserver-formmagick >= 1.4.0-12
+Requires: scponly
 Obsoletes: dungog-proftpd-chroot
 Obsoletes: e-smith-usershellaccess
 Obsoletes: smeserver-sshkeys
@@ -31,13 +32,16 @@ SME server enhancement to provide a server-manager panel under security
 where you can enable shell access on a user by user basis.
 
 Shells available bash, optionally with sudo
-or rssh which allows scp sftp rsync cvs rdist
-TODO Chroot RSSH shell access.
+or scponly which allows scp, or using sshd for sftp only 
 
 Also sets Chroots FTP access, VPN Client Access, 
 and allows you to enter ssh keys  
 
 %changelog
+* Sun Jun 28 2026 Jean-Philippe Pialasse <jpp@koozali.org> 11.0.0-8.sme
+- drop rssh support [SME: 12508]
+- use scponly instead.but sftp-only from sshd could be an option
+
 * Thu May 28 2026 Jean-Philippe Pialasse <jpp@koozali.org> 11.0.0-7.sme
 - move panel translation; keeping those for user-manager panel
 

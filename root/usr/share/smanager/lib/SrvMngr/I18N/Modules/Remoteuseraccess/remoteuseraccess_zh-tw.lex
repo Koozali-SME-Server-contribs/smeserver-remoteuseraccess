@@ -11,5 +11,5 @@
 'rua_VPN_ACCESS' => 'RSSH + VPN存取',
 'rua_SHELL_ACCESS' => '命令列存取',
 'rua_SUDOER_ACCESS' => '超級使用者存取',
-'rua_MODIFY_DESCRIPTION' => '<![CDATA[ <p>啟用使用者帳號的bash shell存取存在安全風險。僅能在您知道自己在做什麼的情況下使用這個選項。更安全的選擇是允許rssh存取(sftp, ssh & rsync)。</p> <p>Sudo存取允許使用者執行root帳號權限的命令而無需root密碼。此較傳遞root密碼更為可取。啟用Sudo亦啟用shell為bash。</p> <p> SHELL, VPN & FTP使用者存取基於遠端存取控制台設定的開啟。</p> <p>從下拉框或文字輸入區中選擇FTP置換根目錄的路徑，蓋選項將覆寫文字區。</p> <p>輸入SSH公開金鑰以允許ssh無需密碼存取，金鑰需以無間斷方式一整行貼上，但可能會以三行以上方式顯示。要刪除所有金鑰請輸入"deletekeys"。</p> ]]>',
+'rua_MODIFY_DESCRIPTION' => '<![CDATA[ <p>啟用使用者帳號的bash shell存取存在安全風險。僅能在您知道自己在做什麼的情況下使用這個選項。更安全的選擇是允許 scponly 存取(sftp, ssh & rsync)。</p> <p>Sudo存取允許使用者執行root帳號權限的命令而無需root密碼。此較傳遞root密碼更為可取。啟用Sudo亦啟用shell為bash。</p> <p> SHELL, VPN & FTP使用者存取基於遠端存取控制台設定的開啟。</p> <p>從下拉框或文字輸入區中選擇FTP置換根目錄的路徑，蓋選項將覆寫文字區。</p> <p>輸入SSH公開金鑰以允許ssh無需密碼存取，金鑰需以無間斷方式一整行貼上，但可能會以三行以上方式顯示。要刪除所有金鑰請輸入"deletekeys"。</p> ]]>',
 'rua_SSHKEYS_DESCRIPTION' => '輸入SSH金鑰以允許ssh無密碼存取，金鑰需以無間斷方式一整行貼上，但可能會以三行以上方式顯示。要刪除所有金鑰請輸入"deletekeys"。',

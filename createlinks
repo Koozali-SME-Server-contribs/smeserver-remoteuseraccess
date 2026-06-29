@@ -6,3 +6,8 @@ foreach $event (qw( create delete modify ))
 templates2events("/etc/proftpd.conf", "user-${event}");
 templates2events("/etc/sudoers",      "user-${event}");
 }
+
+$event="smeserver-remoteuseraccess-update";
+templates2events("/etc/sudoers",      $event);
+templates2events("/etc/proftpd.conf", $event);
+templates2events("/etc/shells", $event);
