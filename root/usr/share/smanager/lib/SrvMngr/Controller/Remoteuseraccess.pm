@@ -70,11 +70,11 @@ sub main {
     $c->app->log->info( $c->log_req );
 
 	#The most common ones
-	 $cdb = esmith::ConfigDB->open()   || die("Couldn't open config db");
-	 $adb = esmith::AccountsDB->open() || die("Couldn't open Accounts db");
+	 $cdb = esmith::ConfigDB::UTF8->open()   || die("Couldn't open config db");
+	 $adb = esmith::AccountsDB::UTF8->open() || die("Couldn't open Accounts db");
 	 $ndb = esmith::NetworksDB->open() || die("Couldn't open Network db");
-	 $hdb = esmith::HostsDB->open() 	  || die("Couldn't open Hosts db");
-	 $ddb = esmith::DomainsDB->open()  || die("Couldn't open Domains db");
+	 $hdb = esmith::HostsDB::UTF8->open() 	  || die("Couldn't open Hosts db");
+	 $ddb = esmith::DomainsDB::UTF8->open()  || die("Couldn't open Domains db");
 
      %rua_data = ();
     my $title = $c->l('rua_Remote user access');
@@ -122,11 +122,11 @@ sub do_update {
 	my $modul = '';
 
 	#The most common ones - you might want to comment out any not used.
-	$cdb = esmith::ConfigDB->open()   || die("Couldn't open config db");
-	$adb = esmith::AccountsDB->open() || die("Couldn't open Accounts db");
+	$cdb = esmith::ConfigDB::UTF8->open()   || die("Couldn't open config db");
+	$adb = esmith::AccountsDB::UTF8->open() || die("Couldn't open Accounts db");
 	$ndb = esmith::NetworksDB->open() || die("Couldn't open Network db");
-	$hdb = esmith::HostsDB->open() 	  || die("Couldn't open Hosts db");
-	$ddb = esmith::DomainsDB->open()  || die("Couldn't open Domains db");
+	$hdb = esmith::HostsDB::UTF8->open() 	  || die("Couldn't open Hosts db");
+	$ddb = esmith::DomainsDB::UTF8->open()  || die("Couldn't open Domains db");
 
     my $title = $c->l('rua_User_Remote_access');
 
@@ -229,11 +229,11 @@ sub do_display {
     $c->app->log->info($c->log_req);
 
 	#The most common ones - you might want to comment out any not used.
-	$cdb = esmith::ConfigDB->open()   || die("Couldn't open config db");
-	$adb = esmith::AccountsDB->open() || die("Couldn't open Accounts db");
+	$cdb = esmith::ConfigDB::UTF8->open()   || die("Couldn't open config db");
+	$adb = esmith::AccountsDB::UTF8->open() || die("Couldn't open Accounts db");
 	$ndb = esmith::NetworksDB->open() || die("Couldn't open Network db");
-	$hdb = esmith::HostsDB->open() 	  || die("Couldn't open Hosts db");
-	$ddb = esmith::DomainsDB->open()  || die("Couldn't open Domains db");
+	$hdb = esmith::HostsDB::UTF8->open() 	  || die("Couldn't open Hosts db");
+	$ddb = esmith::DomainsDB::UTF8->open()  || die("Couldn't open Domains db");
     
     my $title = $c->l('rua_User_Remote_access');
     my $modul = "";
