@@ -16,7 +16,7 @@
 'rua_Shell_Access' => 'Shell Access',
 'rua_PARAMS_panel_action_was_successful' => 'PARAMS panel action was successful',
 'rua_Sudo' => 'Sudo',
-#'rua_Chroot_Path' => 'chroot Path',
+'rua_Chroot_Path' => 'chroot Path',
 'rua_Current_list_of_users' => 'Current list of users',
 'rua_ChrootDir' => 'Chroot path',
 'rua_Enabling_bash_shell_access_for' => 'Enabling shell access for a user account poses a security risk Only use this option if you know what you are doing A safer option is to allow remote ssh access (sftp, Ssh or rsync).',
