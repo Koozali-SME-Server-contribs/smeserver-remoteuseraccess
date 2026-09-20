@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: smeserver-manager Remoteuseraccess module\n"
+"POT-Creation-Date: 2026-09-20 11:14+0100\n"
+"PO-Revision-Date: 2026-09-20 11:14+0100\n"
+"Last-Translator: unassigned\n"
+"Language-Team: unassigned\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nb\n"
+
+msgid "rua_CHROOT_PATH_NON_EXISTANT"
+msgstr "Chroot Path does not exist"
+
+msgid "rua_CHROOT_PATH_NOT_GIVEN"
+msgstr "Chroot Path not given"
+
+msgid "rua_Change_user_remote_access_settings"
+msgstr "(en) Change user remote access settings"
+
+msgid "rua_ChrootDir"
+msgstr "(en) Chroot path"
+
+msgid "rua_Chroot_Path"
+msgstr "Chroot Path"
+
+msgid "rua_Current_list_of_users"
+msgstr "(en) Current list of users"
+
+msgid "rua_Edit_Remote_User_Access_settings:"
+msgstr "(en) Edit Remote User Access settings"
+
+msgid "rua_Enabling_bash_shell_access_for"
+msgstr "(en) Enabling shell access for a user account poses a security risk Only use this option if you know what you are doing A safer option is to allow remote ssh access (sftp, Ssh or rsync)."
+
+msgid "rua_Enter_the_public_SSH_Keys"
+msgstr "(en) Enter the public SSH Keys to allow ssh access without passwords Keys should be pasted as a single line But they will wrap onto three or more lines in the display To delete all keys type \"deletekeys\" into the box."
+
+msgid "rua_PARAMS_panel_action_was_successful"
+msgstr "(en) PARAMS panel action was successful"
+
+msgid "rua_RSSH_+_VPN_Access"
+msgstr "(en) RSSH + VPN Access"
+
+msgid "rua_RSSH_+_VPN__ClientAccess"
+msgstr "(en) RSSH + VPN ClientAccess"
+
+msgid "rua_Remote user access"
+msgstr "(en) Remote user access"
+
+msgid "rua_SHELL,_VPN_&amp;_FTP_access"
+msgstr "(en) SHELL, VPN and FTP access for users depend on the settings in the Remote Access Panel being opened"
+
+msgid "rua_SSH_Keys"
+msgstr "SSH Keys"
+
+msgid "rua_Select_Chroot_path"
+msgstr "Select Chroot Path"
+
+msgid "rua_Select_an_FTP_Chroot_path"
+msgstr "(en) Select an FTP chroot path from the drop down box or enter it in the text field The selection will overwrite the text field"
+
+msgid "rua_Shell_Access"
+msgstr "Shell Access"
+
+msgid "rua_Sudo"
+msgstr "Sudo"
+
+msgid "rua_Sudo_Access"
+msgstr "(en) Sudo Access"
+
+msgid "rua_Sudo_access_allows_users_to"
+msgstr "(en) Sudo access allows users to execute commands with the permissions of the root account without knowing the root password This is more desirable than passing around the root password."
+
+msgid "rua_USERTABLE_panel_action_was_successful"
+msgstr "(en) USERTABLE panel action was successful"
+
+msgid "rua_User_Remote_access"
+msgstr "(en) User Remote access"
+
+# --- obsolete: no longer present in the English source ---
+#~ msgid "rua_FORM_TITLE"
+#~ msgstr "Change user remote access settings"
+#~ msgid "rua_MODIFY_DESCRIPTION"
+#~ msgstr "<![CDATA[ <p> Enabling bash shell access for a user account poses a security risk. Only use this option if you know what you are doing. A safer option is to allow scponly access (sftp, ssh & rsync). </p> <p> Sudo access allows users to execute commands with the permissions of the root account without knowing the root password. This is more desirable than passing around the root password. Setting Sudo to yes also sets the shell to bash </p> <p> SHELL, VPN & FTP access for users depend on the settings in the Remote Access Panel being opened. </p> <p> Select an FTP Chroot path from the drop down box or enter it in the text field, the selection will overwrite the text field. </p> <p> Enter the public SSH Keys to allow ssh access without passwords, keys should be pasted as a single line, but they will wrap onto three or more lines in the display. To delete all keys type \"deletekeys\". </p> ]]>"
+#~ msgid "rua_SSH keys"
+#~ msgstr "SSH keys"
+#~ msgid "rua_SSHKEYS_DESCRIPTION"
+#~ msgstr "Enter the public SSH Keys to allow ssh access without passwords, keys should be pasted as a single line, but they will wrap onto three or more lines in the display. To delete all keys type \"deletekeys\"."
+#~ msgid "rua_SUDOER_ACCESS"
+#~ msgstr "Sudo Access"
+#~ msgid "rua_User Remote Access"
+#~ msgstr "User Remote Access"
+#~ msgid "rua_VPN_ACCESS"
+#~ msgstr "RSSH + VPN Access"
