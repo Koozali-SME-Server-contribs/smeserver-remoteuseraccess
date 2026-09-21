@@ -12,7 +12,7 @@
 	</pre>
     % }
     
-    <h1><%= l('rua_Remote user access')%></h1>
+    <h1><%= l('rua_User_Remote_access')%></h1>
     %#<h2><%=$title%></h2>
 
     % if ( stash('modul')) {

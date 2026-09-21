@@ -17,7 +17,7 @@ msgid "rua_CHROOT_PATH_NOT_GIVEN"
 msgstr "Chroot Pad niet opgegeven"
 
 msgid "rua_Change_user_remote_access_settings"
-msgstr "(en) Change user remote access settings"
+msgstr "Verander instellingen voor gebruiker op afstand"
 
 msgid "rua_ChrootDir"
 msgstr "(en) Chroot path"
@@ -35,16 +35,16 @@ msgid "rua_Enabling_bash_shell_access_for"
 msgstr "(en) Enabling shell access for a user account poses a security risk Only use this option if you know what you are doing A safer option is to allow remote ssh access (sftp, Ssh or rsync)."
 
 msgid "rua_Enter_the_public_SSH_Keys"
-msgstr "(en) Enter the public SSH Keys to allow ssh access without passwords Keys should be pasted as a single line But they will wrap onto three or more lines in the display To delete all keys type \"deletekeys\" into the box."
+msgstr "Geef de publieke SSH sleutels op om toegang voor ssh toe te staan zonder wachtwoord, sleutels moeten worden geplakt als één enkele regel maar zullen worden verspreid over die of meer regels in het scherm. Om alle sleutels te verwijderen, type dan \\\"deletekeys\\\"."
 
 msgid "rua_PARAMS_panel_action_was_successful"
 msgstr "(en) PARAMS panel action was successful"
 
 msgid "rua_RSSH_+_VPN_Access"
-msgstr "(en) RSSH + VPN Access"
+msgstr "RSSH + VPN toegang"
 
 msgid "rua_RSSH_+_VPN__ClientAccess"
-msgstr "(en) RSSH + VPN ClientAccess"
+msgstr "RSSH + VPN toegang"
 
 msgid "rua_Remote user access"
 msgstr "(en) Remote user access"
@@ -65,7 +65,7 @@ msgid "rua_Shell_Access"
 msgstr "Shell Toegang"
 
 msgid "rua_Sudo"
-msgstr "Sudo"
+msgstr "Sudo Toegang"
 
 msgid "rua_Sudo_Access"
 msgstr "(en) Sudo Access"
@@ -77,7 +77,7 @@ msgid "rua_USERTABLE_panel_action_was_successful"
 msgstr "(en) USERTABLE panel action was successful"
 
 msgid "rua_User_Remote_access"
-msgstr "(en) User Remote access"
+msgstr "Toegang voor gebruiker op afstand"
 
 # --- obsolete: no longer present in the English source ---
 #~ msgid "rua_FORM_TITLE"
@@ -90,7 +90,7 @@ msgstr "(en) User Remote access"
 #~ msgstr "Geef de publieke SSH sleutels op om toegang voor ssh toe te staan zonder wachtwoord, sleutels moeten worden geplakt als één enkele regel maar zullen worden verspreid over die of meer regels in het scherm. Om alle sleutels te verwijderen, type dan \\\"deletekeys\\\"."
 #~ msgid "rua_SUDOER_ACCESS"
 #~ msgstr "Sudo Toegang"
-#~ msgid "rua_User Remote Access"
-#~ msgstr "Toegang voor gebruiker op afstand"
+msgid "rua_User Remote Access"
+msgstr "Toegang voor gebruiker op afstand"
 #~ msgid "rua_VPN_ACCESS"
 #~ msgstr "RSSH + VPN toegang"

@@ -1,4 +1,4 @@
-# ORPHANED (no longer in remoteuseraccess_en.lex; kept for reference, commented out by lex-to-po.pl): 'rua_User Remote Access' => 'Toegang voor gebruiker op afstand',
+'rua_User Remote Access' => 'Toegang voor gebruiker op afstand',
 # ORPHANED (no longer in remoteuseraccess_en.lex; kept for reference, commented out by lex-to-po.pl): 'rua_SSH keys' => 'SSH sleutels',
 # ORPHANED (no longer in remoteuseraccess_en.lex; kept for reference, commented out by lex-to-po.pl): 'rua_FORM_TITLE' => 'Verander instellingen voor gebruiker op afstand',
 'rua_Shell_Access' => 'Shell',

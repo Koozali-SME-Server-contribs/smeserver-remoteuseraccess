@@ -64,7 +64,7 @@
 		<p><span class=label>
 			%=l('rua_Sudo_Access')
 		</span><span class=data>
-			% my @Sudoer_options = [['No' => 'no'], ['Yes' => 'yes']];
+			% my @Sudoer_options = [[l('NO') => 'no'], [l('YES') => 'yes']];
 			% param 'Sudoer' => $rua_data->{Sudoer} unless param 'Sudoer';
 			%= select_field 'Sudoer' => @Sudoer_options, class => 'input', id => 'Sudoer_select'
 		<br></span>	</p>
@@ -72,7 +72,7 @@
 		<p><span class=label>
 			%=l('rua_RSSH_+_VPN__ClientAccess')
 		</span><span class=data>
-			% my @VPNClientAccess_options = [['No' => 'no'], ['Yes' => 'yes']];
+			% my @VPNClientAccess_options = [[l('NO') => 'no'], [l('YES') => 'yes']];
 			% param 'VPNClientAccess' => $rua_data->{VPNClientAccess} unless param 'VPNClientAccess';
 			%= select_field 'VPNClientAccess' => @VPNClientAccess_options, class => 'input', id => 'VPNClientAccess_select'
 		<br></span>	</p>
